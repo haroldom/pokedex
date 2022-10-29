@@ -1,0 +1,245 @@
+:root {
+    --blackcolor: #40464B;
+    --whitecolor: #ffffff;
+    --fire: #EE8130;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* This is for the loading */
+.hidden {
+    transition: all 1.5s ease;
+    opacity: 0;
+}
+
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(170, 0, 0, 1) 0%, rgba(255, 118, 84, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.pokeball {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid;
+    animation: frames .8s linear 0s infinite;
+}
+
+.pokeball:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background-color: red;
+    border-bottom: 4px solid;
+    top: -4px
+}
+
+.pokeball:before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border: 4px solid;
+    border-radius: 50%;
+    bottom: 18px;
+    right: 18px;
+    z-index: 1;
+}
+
+/* AnimationFrames */
+@keyframes frames {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Starting the main content */
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+}
+
+.main_container h1 {
+    border-bottom: 1px solid black;
+    font-size: 3.6rem;
+    font-weight: 900;
+    width: 60%;
+    text-align: center;
+    padding-bottom: 20px;
+    color: var(--blackcolor);
+    margin: 3rem;
+}
+
+.poke_container {
+    background-color: var(--fire);
+    padding: 1.6rem 2rem;
+    max-width: 26rem;
+    width: 100%;
+    max-height: 15rem;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.6rem;
+}
+
+.poke_container__img {
+    height: 12rem;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    z-index: 2;
+    transform: scaleX(-1);
+}
+
+.poke_container__background {
+    position: absolute;
+    max-height: 13rem;
+    opacity: .2;
+    top: 4.5rem;
+    right: -1rem;
+    z-index: 1;
+}
+
+.poke_container__text {
+    color: var(--whitecolor);
+}
+
+.poke_container .title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.type_container {
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, .2);
+    padding: 0.5rem;
+    width: 8rem;
+    border-radius: 20rem 20rem 20rem 20rem;
+    -moz-border-radius: 20rem 20rem 20rem 20rem;
+    -webkit-border-radius: 20rem 20rem 20rem 20rem;
+    border: 0 solid #000000;
+    text-align: center;
+    color: var(--whitecolor);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+.pokes_main {
+    width: 100%;
+    display: grid;
+    gap: 1.6rem;
+    grid-auto-rows: 17rem;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    justify-items: center;
+}
+
+.id {
+    font-size: 2.4rem;
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+
+@media screen and (min-width:576px) {
+
+    .pokes_main {
+        display: grid;
+        gap: 1.6rem;
+        grid-auto-rows: 15rem;
+        grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+        justify-items: center;
+    }
+
+    .poke_container {
+        margin: 0;
+        max-width: 25rem;
+    }
+}
+
+
+
+@media screen and (min-width: 456px) and (max-width:576px) {
+    .pokes_main {
+        display: grid;
+        gap: 1.6rem;
+        grid-auto-rows: 12rem;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        justify-items: center;
+    }
+
+    .poke_container {
+        padding: 1.6rem 1.6rem;
+        max-width: 20rem;
+        height: 12rem;
+        border-radius: 1.5rem;
+    }
+
+
+    .poke_container__img {
+        height: 10rem;
+
+    }
+
+    .poke_container__background {
+        max-height: 10rem;
+    }
+
+
+    .poke_container .title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .type_container {
+        font-size: 1.2rem;
+
+    }
+
+}
