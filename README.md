@@ -6,7 +6,7 @@
 ## A fun Pokedex with JS
 [![pokedex-min.gif](https://s4.gifyu.com/images/pokedex-min.gif)](https://gifyu.com/image/SEKmW)
 
-We all know a calculator, yes, those we use in math classes, I set out to make a web version of a calculator because we don't always have a physical one in our hand. Also, look at it as one of my first projects with JS.
+One of my first practices consuming an API, we've all heard of Pokemon, why not make an app out of it? It was really fun
 
 Last Updates:
 * A loading screen until have the API's results.
