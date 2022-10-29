@@ -4,7 +4,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## A fun Pokedex with JS
-[![pokedex-min.gif](https://s4.gifyu.com/images/pokedex-min.gif)](https://gifyu.com/image/SEKmW)
+![image](https://user-images.githubusercontent.com/80862357/198847293-f932e16a-7082-4fe2-9873-f120c16d2230.png)
 
 One of my first practices consuming an API, we've all heard of Pokemon, why not make an app out of it? It was really fun
 
